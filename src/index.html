@@ -1,334 +1,197 @@
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@tailwindcss/forms examples</title>
-  <link rel="stylesheet" href="/css/app.css" />
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-</head>
-
-<body>
-  <div class="antialiased text-gray-900 px-6">
-    <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
-      <div class="py-8">
-        <h1 class="text-4xl font-bold">@tailwindcss/forms examples</h1>
-        <p class="mt-2 text-lg text-gray-600">
-          An opinionated form reset designed to make form elements easy to style with utility
-          classes.
-        </p>
-        <div class="mt-4 flex space-x-4">
-          <a class="text-lg underline" href="https://github.com/tailwindlabs/tailwindcss-forms">Documentation</a>
-          <a class="text-lg underline" href="/kitchen-sink.html">Kitchen Sink</a>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+  </head>
+  <body style="font-family:Helvetica;" class="max-h-screen min-h-screen">
+    <section style="background-color: #f0f2f5; ">
+      <div class="mx-auto flex gap-28 justify-between py-40 px-60">      
+        <div class="w-1/6"></div>
+        <div class="relative pt-20">
+          <img class="w-1/2 relative -left-6" src="static/facebookLogo.svg" />
+          <h2 class="text-3xl">
+            Avec Facebook, partagez et restez en contact avec votre entourage.
+          </h2>
         </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Unstyled</h2>
-        <p class="mt-2 text-lg text-gray-600">This is how form elements look out of the box.</p>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input type="text" class="mt-1 block w-full" placeholder="" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input type="email" class="mt-1 block w-full" placeholder="john@example.com" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input type="date" class="mt-1 block w-full" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select class="block w-full mt-1">
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea class="mt-1 block w-full" rows="3"></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input type="checkbox" checked />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
+        <div style="width: 396px;height:316px; min-width:max-content;">
+          <div class="shadow-lg bg-white py-5 px-2 rounded-lg">
+            <form>
+              <input
+                type="text"
+                class="block border-1/2 border-gray-200 w-full p-3 text-lg rounded-md mb-5 placeholder-gray-300"
+                placeholder="Adresse e-mail ou numero de tel."
+              />
+              <input
+                type="password"
+                class="block border-1/2 border-gray-200 w-full p-3 text-lg rounded-md mb-5 placeholder-gray-300"
+                placeholder="Mot de passe"
+              />
+              <input
+                type="submit"
+                class="block w-full rounded-md text-lg font-bold p-3 text-white"
+                style="background-color: #1877f2;"
+                value="Se connecter"
+              />
+            </form>
+            <a href="#" class="block my-5 text-center text-md text-blue-600"
+              >Mot de passe oublié ?</a
+            >
+            <hr class="mb-10" />
+            <div class="text-center">
+              <a
+                href="#"
+                class="rounded-md text-lg font-bold p-3 bg-green-500 text-white"
+                >Créer nouveau compte</a
+              >
             </div>
           </div>
-        </div>
-      </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Simple</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input type="text" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    border-gray-300
-                    shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                  " placeholder="" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input type="email" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    border-gray-300
-                    shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                  " placeholder="john@example.com" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input type="date" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    border-gray-300
-                    shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                  " />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select class="
-                    block
-                    w-full
-                    mt-1
-                    rounded-md
-                    border-gray-300
-                    shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                  ">
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    border-gray-300
-                    shadow-sm
-                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
-                  " rows="3"></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input type="checkbox" class="
-                          rounded
-                          border-gray-300
-                          text-indigo-600
-                          shadow-sm
-                          focus:border-indigo-300
-                          focus:ring
-                          focus:ring-offset-0
-                          focus:ring-indigo-200
-                          focus:ring-opacity-50
-                        " checked />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
+          <div class="text-center text-md mt-5">
+            <p>
+              <a href="#" class="font-bold">Créer une Page</a> pour une
+              célébrité, une marque ou une entreprise.
+            </p>
           </div>
         </div>
+      <div class="w-1/6"></div>
       </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Underline</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input type="text" class="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  " placeholder="" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input type="email" class="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  " placeholder="john@example.com" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input type="date" class="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  " />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select class="
-                    block
-                    w-full
-                    mt-0
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  ">
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea class="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  " rows="2"></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input type="checkbox" class="
-                          border-gray-300 border-2
-                          text-black
-                          focus:border-gray-300 focus:ring-black
-                        " />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
+    </section>
+    <footer class="bg-white " style="color: #8a8d91;">
+      <div class="container mx-auto py-10 px-60">
+        <div>
+          <ul class="flex flex-wrap gap-3 text-gray-600" style="color: #8a8d91; font-size:12px;">
+            <li>
+              <a href="" class="inline-block hover:underline text-gray-700"  style="color: #8d8d8d; font-size:12px;"
+                >Français (France)</a
+              >
+            </li>
+            <li>
+              <a href="" class="inline-block hover:underline">English (US)</a>
+            </li>
+            <li><a href="" class="inline-block hover:underline">Español</a></li>
+            <li><a href="" class="inline-block hover:underline">Türkçe</a></li>
+            <li>
+              <a href="" class="inline-block hover:underline">
+                Português (Portugal)</a
+              >
+            </li>
+            <li>
+              <a href="" class="inline-block hover:underline"> العربية</a>
+            </li>
+            <li>
+              <a href="" class="inline-block hover:underline"> Italiano</a>
+            </li>
+            <li>
+              <a href="" class="inline-block hover:underline"> Deutsch</a>
+            </li>
+            <li><a href="" class="inline-block hover:underline"> हिन्दी</a></li>
+            <li>
+              <a href="" class="inline-block hover:underline"> 中文(简体)</a>
+            </li>
+            <li><a href="" class="inline-block hover:underline"> 日本語</a></li>
+          </ul>
+          <hr class="my-2" />
+          <ul class="flex flex-wrap gap-3 text-gray-600" style="color: #8a8d91;  font-size:12px;">
+            <li>
+              <a href="#" class="inline-block hover:underline">Sign Up</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">S’inscrire</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Se connecter</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Messenger</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Facebook Lite</a>
+            </li>
+            <li><a href="#" class="inline-block hover:underline">Watch</a></li>
+            <li><a href="#" class="inline-block hover:underline">Lieux</a></li>
+            <li><a href="#" class="inline-block hover:underline">Jeux</a></li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Marketplace</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Meta Pay</a>
+            </li>
+            <li><a href="#" class="inline-block hover:underline">Oculus</a></li>
+            <li><a href="#" class="inline-block hover:underline">Portal</a></li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Instagram</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Bulletin</a>
+            </li>
+            <li><a href="#" class="inline-block hover:underline">Local</a></li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Collectes de dons</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Services</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Centre d’information sur les élections</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Groupes</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">À propos</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Créer une publicité</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Créer une Page</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Développeurs</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Emplois</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Confidentialité</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Cookies</a>
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Choisir sa pub</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >Conditions générales</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline"
+                >AideImportation des contacts et non-utilisateurs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="inline-block hover:underline">Paramètres</a>
+            </li>
+          </ul>
+          <div>Meta © 2022</div>
         </div>
       </div>
-      <div class="py-12">
-        <h2 class="text-2xl font-bold">Solid</h2>
-        <div class="mt-8 max-w-md">
-          <div class="grid grid-cols-1 gap-6">
-            <label class="block">
-              <span class="text-gray-700">Full name</span>
-              <input type="text" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    bg-gray-100
-                    border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
-                  " placeholder="" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Email address</span>
-              <input type="email" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    bg-gray-100
-                    border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
-                  " placeholder="john@example.com" />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">When is your event?</span>
-              <input type="date" class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    bg-gray-100
-                    border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
-                  " />
-            </label>
-            <label class="block">
-              <span class="text-gray-700">What type of event is it?</span>
-              <select class="
-                    block
-                    w-full
-                    mt-1
-                    rounded-md
-                    bg-gray-100
-                    border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
-                  ">
-                <option>Corporate event</option>
-                <option>Wedding</option>
-                <option>Birthday</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="text-gray-700">Additional details</span>
-              <textarea class="
-                    mt-1
-                    block
-                    w-full
-                    rounded-md
-                    bg-gray-100
-                    border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
-                  " rows="3"></textarea>
-            </label>
-            <div class="block">
-              <div class="mt-2">
-                <div>
-                  <label class="inline-flex items-center">
-                    <input type="checkbox" class="
-                          rounded
-                          bg-gray-200
-                          border-transparent
-                          focus:border-transparent focus:bg-gray-200
-                          text-gray-700
-                          focus:ring-1 focus:ring-offset-2 focus:ring-gray-500
-                        " />
-                    <span class="ml-2">Email me news and special offers</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
+    </footer>
+  </body>
 </html>
